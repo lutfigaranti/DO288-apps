@@ -828,3 +828,18 @@
   828  oc login -u lutfio-garantibbva-com-tr  -p 4f167ef07765472193e0 https://api.ocp-eu2.prod.nextcle.com:6443
   829  oc new-project ${RHT_OCP4_DEV_USER}-manage-deploy
   830  history > history4.txt
+  831  git add .
+  832  git commit -m 'hist'
+  833  git push
+  834  oc new-app --name scale php:7.0~https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps#manage-deploy --context-dir php-scale
+  835  oc get pods
+  836  oc descrbe dc/scale | grep 'Strategy'
+  837  oc describe dc/scale | grep 'Strategy'
+  838  oc get pods
+  839  oc expose svc scale
+  840  oc get pods
+  841  oc rollback dc/scale
+  842  oc get pods
+  843  lab manage-deploy grade
+  844  clear
+  845  history > history4.txt
