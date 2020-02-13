@@ -851,3 +851,109 @@
   851  git checkout master
   852  git pull
   853  history > history4.txt
+  854  git add .
+  855  git commit -m 'hist'
+  856  git push
+  857  clear
+  858  oc get template -n openshift   grep jenkins
+  859  oc get template -n openshift  |  grep jenkins
+  860  lab simple-pipeline start
+  861  source /usr/local/etc/ocp4.config
+  862  oc login -u lutfio-garantibbva-com-tr  -p 4f167ef07765472193e0 https://api.ocp-eu2.prod.nextcle.com:6443
+  863  oc get template -n openshift  |  grep jenkins
+  864  oc new-project ${RHT_OCP4_DEV_USER}-ci-cd
+  865  oc new-app jenkins-ephemeral -p MEMORY_LIMIT=2048Mi
+  866  git checkout -b simple-pipeline
+  867  git push -u origin simple-pipeline
+  868  cd simple-pipeline/
+  869  git add .
+  870  git commit -m 'edit jenkinsfile'
+  871  git push
+  872  oc get pods
+  873  oc new-project ${RHT_OCP4_DEV_USER}-simple-pipeline
+  874  
+  875  oc policy add-role-to-user edit system:sericeaccount:${RHT_OCP4_DEV_USER}-ci-cd:jenkins -n ${RHT_OCP4_DEV_USER}-simple-pipeline
+  876  oc create -f ~/DO288/labs/simple-pipeline/simple-pipeline.yaml
+  877  oc start-build simple-pipeline
+  878  oc get -o yaml bc/simple-pipeline
+  879  oc policy add-role-to-user edit system:serviceaccount:${RHT_OCP4_DEV_USER}-ci-cd:jenkins -n ${RHT_OCP4_DEV_USER}-simple-pipeline
+  880  cat /usr/local/etc/ocp4.config
+  881  lab custom-pipeline start
+  882  source /usr/local/etc/ocp4.config
+  883  oc login -u lutfio-garantibbva-com-tr  -p 4f167ef07765472193e0 https://api.ocp-eu2.prod.nextcle.com:6443
+  884  oc get pods -n ${RHT_OCP4_DEV_USER}-ci-cd
+  885  oc new-project ${RHT_OCP4_DEV_USER}-book-stage
+  886  oc new-project ${RHT_OCP4_DEV_USER}-book-dev
+  887  git checkout master
+  888  git pull
+  889  git checkout -b custom-pipeline
+  890  git push -u origin custom-pipeline
+  891  cp ~/DO288/solutions/custom-pipeline/Jenkinsfile ~/DO288-apps/books/jenkins/Jenkinsfile
+  892  git status
+  893  cat ~/DO288-apps/books/jenkins/Jenkinsfile
+  894  oc projects
+  895  cat ~/DO288-apps/books/jenkins/Jenkinsfile
+  896  vim ~/DO288-apps/books/jenkins/Jenkinsfile
+  897  cat ~/DO288-apps/books/jenkins/Jenkinsfile
+  898  cd ..
+  899  cd books/
+  900  git commit -am 'complated jenkinsfile'
+  901  git push
+  902  cd ..
+  903  oc policy add-role-to-user edit system:serviceaccount:${RHT_OCP4_DEV_USER}-ci-cd:jenkins -n ${RHT_OCP4_DEV_USER}-book-dev
+  904  oc policy add-role-to-user edit system:serviceaccount:${RHT_OCP4_DEV_USER}-ci-cd:jenkins -n ${RHT_OCP4_DEV_USER}-book-stage
+  905  oc create -f ~/DO288/labs/custom-pipeline/custom-pipeline-bc.json
+  906  cat ~/DO288/labs/custom-pipeline/custom-pipeline-bc.json
+  907  vim ~/DO288/labs/custom-pipeline/custom-pipeline-bc.json
+  908  oc create -f ~/DO288/labs/custom-pipeline/custom-pipeline-bc.json
+  909  oc start-build custom-pipeline
+  910  vim ~/DO288-apps/books/tests/app_test.js 
+  911  git commit -am 'Fixed tests'
+  912* 
+  913  git commit -am 'Fixed tests'
+  914  git push
+  915  oc start-build custom-pipeline
+  916  vim ~/DO288-apps/books/routes/authors.js 
+  917  git commit -am 'Fixed lint'
+  918  git push
+  919  oc start-build custom-pipeline
+  920  oc get pods
+  921  oc policy add-role-to-user edit system:serviceaccount:${RHT_OCP4_DEV_USER}-ci-cd:jenkins -n ${RHT_OCP4_DEV_USER}-book-stage
+  922  git status
+  923  history > history4.txt
+  924  git add .
+  925  git commit -am 'history'
+  926  git push
+  927  git status
+  928  git push
+  929  git pull
+  930  git push
+  931  history > history4.txt
+  932  git commit -am 'history'
+  933  git push
+  934  git status
+  935  git push
+  936  git checkout master
+  937  git pull
+  938  history > history4.txt
+  939  git commit -am 'history'
+  940  git push
+  941  source /usr/local/etc/ocp4.config
+  942  git pppppppppush
+  943  git push
+  944  git pul
+  945  git pull
+  946  git config list
+  947  git list config
+  948  git --help | grep config
+  949  git login
+  950  git --help
+  951  git help -g
+  952  git help -a
+  953  git config --help
+  954  git config -l
+  955  cd ..
+  956  cd DO288
+  957  cd ..
+  958  cd DO288-apps/
+  959  history > history4.txt
