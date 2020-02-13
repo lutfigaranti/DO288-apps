@@ -11,7 +11,7 @@ pipeline {
 
     environment {
         DEV_PROJECT = "lutfio-garantibbva-com-tr-book-dev"
-        STAGE_PROJECT = "lutfi-garantibbva-com-tr-book-stage"
+        STAGE_PROJECT = "lutfio-garantibbva-com-tr-book-stage"
         APP_GIT_URL = "https://github.com/lutfigaranti/DO288-apps"
         NEXUS_SERVER = "http://nexus-common.apps.ocp-eu2.prod.nextcle.com/repository/nodejs"
 
