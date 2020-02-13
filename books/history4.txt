@@ -921,3 +921,11 @@
   921  oc policy add-role-to-user edit system:serviceaccount:${RHT_OCP4_DEV_USER}-ci-cd:jenkins -n ${RHT_OCP4_DEV_USER}-book-stage
   922  git status
   923  history > history4.txt
+  924  git add .
+  925  git commit -am 'history'
+  926  git push
+  927  git status
+  928  git push
+  929  git pull
+  930  git push
+  931  history > history4.txt
